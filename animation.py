@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
+from PIL import Image
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 from skimage import measure
@@ -86,15 +87,22 @@ def plot_cond(time,ds,outDir=''):
 
 
 
-
-    plt.title('t='+str(time+1))
+    ax.text2D(0.53, 0.85, 't='+str(time+1), transform=ax.transAxes,size=12)
+    # plt.title('t='+str(time+1))
     plt.tight_layout()
     # plt.show()
-    plt.savefig(outDir+'img'+str(time).zfill(4)+'.png')
+    fname=outDir+'img'+str(time).zfill(4)+'.png'
+    plt.savefig(fname)
     plt.close("all")
+    im=Image.open(fname)
+    
+    croppedIm = im.crop((90, 60, 885, 550)) #left top right bottom
+    croppedIm.save(fname)
     return
 
 for time in range(start,end):
     plot_cond(time,ds)
+
     
-os.system('convert  -loop 1 -extent 900x584 img*png animation.gif ')
+# os.system('convert  -loop 1 -extent 900x584 img000*png animation.gif ')
+os.system('convert  -loop 1  img*png animation.gif ')
