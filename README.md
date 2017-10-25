@@ -4,7 +4,7 @@ Name: Xin Rong Chua
 
 Email: xchua@princeton.edu
 
-Caption: To better predict changes in global rainfall, we study the statistics of convective processes using a high-resolution (2km) model. These events are visualized by plotting the 2e-5 kg/kg isosurfaces of cloud condensate output at every minute. Both shallow (~ 1km) and deep (~10 km) convective events are represented. The latent heat released when the condensates form allow for ascending motion. This rising takes place over a small area. Later, as the condensates re-evaporate or are converted to precipitation, the convective event dissipates. Each event occurs on a timescale of minutes to hours. 
+Caption: To better predict changes in global rainfall, we study the statistics of convective processes using a high-resolution (2km) model. These events are visualized by plotting the 2e-5 kg/kg isosurfaces of cloud condensate output for each minute of the simulation. Both shallow (~ 1km) and deep (~10 km) convective events are represented. The latent heat released when the condensates form allow for ascending motion. This rising takes place over a small area. Later, as the condensates re-evaporate or are converted to precipitation, the convective event dissipates. Each event occurs on a timescale of minutes to hours. Viewing the spectrum of convective events in the domain is valuable in building intuition for how the aggregated behavior of convection influences precipitation means and extremes.
 
 
 
